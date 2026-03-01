@@ -1,0 +1,96 @@
+* {
+  font-size: 14px;
+  font-family: "FiraCode Nerd Font Mono";
+}
+
+window#waybar {
+  background: #22303c;
+  color: #E6D5B8;
+}
+
+#workspaces {
+  background: #22303c;
+  color: #E6D5B8;
+  padding: 0 5px;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  color: #00d2c3;
+}
+
+#workspaces button.focused {
+  background: #22303c;
+  color: #E6D5B8;
+}
+
+#tray {
+  background: #22303c;
+  color: #E6D5B8;
+  padding: 0 5px;
+}
+
+/* CLOCKS — texto é informação → azul */
+#clock,
+#clock\.1,
+#clock\.2,
+#clock\.3 {
+  background: #22303c;
+  color: #48c4f8;
+  padding: 0 5px;
+}
+
+/* MODULES RIGHT — todos são informação */
+#pulseaudio {
+  background: #22303c;
+  color: #00d2c3;
+  padding: 0 5px;
+}
+
+#memory {
+  background: #22303c;
+  color: #00d2c3;
+  padding: 0 5px;
+}
+
+#cpu {
+  background: #22303c;
+  color: #00d2c3;
+  padding: 0 5px;
+}
+
+#disk {
+  background: #22303c;
+  color: #00d2c3;
+  padding: 0 5px;
+}
+
+#network {
+  background: #22303c;
+  color: #00d2c3;
+  padding: 0 5px;
+}
+
+#temperature,
+#custom-gpu {
+  background: #22303c;
+  color: #00d2c3;
+  padding: 0 5px;
+}
+
+/* NOTIFICATIONS — ícone é funcional, mantém azul */
+#custom-notifications {
+  color: #48c4f8;
+  padding: 0 5px;
+}
+
+/* Hover pode usar warm accent (detail) */
+#custom-notifications:hover {
+  color: #f7941e;
+}
+
+#custom-separator {
+  background: #22303c;
+  color: #C79A2B; /* detail / structure */
+  padding: 0 5px;
+}

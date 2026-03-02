@@ -1,0 +1,6 @@
+
+@theme "/home/menezess42/.config/rofi/themes/dwf_theme.rasi"
+    //test
+configuration{
+    show-icons: true;
+}

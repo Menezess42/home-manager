@@ -1,0 +1,13 @@
+* {
+    bg0: #22303c;
+    bg1: #22303c;
+    bg2: #0d1b2a;
+    bg3: #c79a2b;
+
+    fg0: #48c4f8;
+    fg1: #00d2c3;
+    fg2: #6c7a89;
+    fg3: #00d2c3;
+}
+
+@import "template/rounded-template.rasi"

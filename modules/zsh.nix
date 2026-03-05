@@ -44,24 +44,18 @@
             eval "$(direnv hook zsh)"
             export PATH="$HOME/.config/home-manager/bashscript:$PATH"
             autoload -Uz add-zsh-hook
-            zmodload zsh/system
 
-            function _auto_tmux_attach() {
-                if [[ -n "$TMUX_AUTO_ATTACH" && -z "$TMUX" ]]; then
-                    local session="$TMUX_AUTO_ATTACH"
-                    unset TMUX_AUTO_ATTACH
+            _auto_project_tmux() {
+                if [[ -n "$PROJECT_TMUX_SESSION" && -z "$TMUX" ]]; then
+                    local s="$PROJECT_TMUX_SESSION"
+                    unset PROJECT_TMUX_SESSION
 
-                    add-zsh-hook -d precmd _auto_tmux_attach
-
-                    # agenda attach após o shell liberar o TTY
-                    {
-                        sleep 0
-                        tmux attach -t "$session"
-                    } &!
+                    add-zsh-hook -d precmd _auto_project_tmux
+                    tmux attach -t "$s"
                 fi
             }
 
-            add-zsh-hook precmd _auto_tmux_attach
+            add-zsh-hook precmd _auto_project_tmux
             '';
         };
     };

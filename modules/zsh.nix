@@ -43,11 +43,6 @@
             source ${config.home.homeDirectory}/.p10k.zsh
             eval "$(direnv hook zsh)"
             export PATH="$HOME/.config/home-manager/bashscript:$PATH"
-            function chpwd() {
-                if [[ -n "$TMUX_AUTO_ATTACH" && -z "$TMUX" ]]; then
-                    local session=$TMUX_AUTO_ATTACH
-                    unset TMUX_AUTO_ATTACH
-
             function _auto_tmux_attach() {
                 if [[ -o interactive && -n "$TMUX_AUTO_ATTACH" && -z "$TMUX" ]]; then
                     local session="$TMUX_AUTO_ATTACH"

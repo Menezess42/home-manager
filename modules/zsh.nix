@@ -46,16 +46,22 @@
             autoload -Uz add-zsh-hook
 
             _auto_project_tmux() {
-                if [[ -n "$PROJECT_TMUX_SESSION" && -z "$TMUX" ]]; then
-                    local s="$PROJECT_TMUX_SESSION"
-                    unset PROJECT_TMUX_SESSION
+                [[ -n "$TMUX" ]] && return
 
-                    add-zsh-hook -d precmd _auto_project_tmux
-                    tmux attach -t "$s"
+                if [[ -f .envrc ]]; then
+                    local session=$(basename "$PWD")
+
+                    if ! tmux has-session -t "$session" 2>/dev/null; then
+                        tmux new-session -d -s "$session" -n editor
+                        tmux send-keys -t "$session:editor" "mvim ." C-m
+                        tmux new-window -t "$session" -n shell
+                    fi
+
+                    tmux attach -t "$session"
                 fi
             }
 
-            add-zsh-hook precmd _auto_project_tmux
+            add-zsh-hook chpwd _auto_project_tmux
             '';
         };
     };

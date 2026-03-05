@@ -43,13 +43,19 @@
             source ${config.home.homeDirectory}/.p10k.zsh
             eval "$(direnv hook zsh)"
             export PATH="$HOME/.config/home-manager/bashscript:$PATH"
+            autoload -Uz add-zsh-hook
+
             function _auto_tmux_attach() {
-                if [[ -o interactive && -n "$TMUX_AUTO_ATTACH" && -z "$TMUX" ]]; then
+                if [[ -n "$TMUX_AUTO_ATTACH" && -z "$TMUX" ]]; then
                     local session="$TMUX_AUTO_ATTACH"
                     unset TMUX_AUTO_ATTACH
+
+                    add-zsh-hook -d precmd _auto_tmux_attach
                     tmux attach -t "$session"
                 fi
             }
+
+            add-zsh-hook precmd _auto_tmux_attach
             '';
         };
     };

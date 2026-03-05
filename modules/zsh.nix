@@ -48,18 +48,11 @@
                     local session=$TMUX_AUTO_ATTACH
                     unset TMUX_AUTO_ATTACH
 
-                    function _do_attach() {
-                        add-zsh-hook -d precmd _do_attach
-
-                        # espera o direnv terminar de carregar
-                        while [[ -n "$DIRENV_DIFF" ]]; do
-                            sleep 0.05
-                        done
-
-                        tmux attach -t "$session"
-                    }
-
-                    add-zsh-hook precmd _do_attach
+            function _auto_tmux_attach() {
+                if [[ -o interactive && -n "$TMUX_AUTO_ATTACH" && -z "$TMUX" ]]; then
+                    local session="$TMUX_AUTO_ATTACH"
+                    unset TMUX_AUTO_ATTACH
+                    tmux attach -t "$session"
                 fi
             }
             '';

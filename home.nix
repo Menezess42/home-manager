@@ -93,6 +93,7 @@
         nerd-fonts.droid-sans-mono
         #Player
         playerctl
+        shotcut
     ];
 
     xdg.portal = {

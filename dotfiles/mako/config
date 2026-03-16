@@ -11,19 +11,19 @@ default-timeout=9000
 
 background-color=#22303c
 text-color=#E6D5B8
-border-color=#C79A2B
+border-color=#CC6E2E
 
 [urgency=normal]
 background-color=#1B263B
-border-color=#C79A2B
-text-color=#48c4f8
+border-color=#CC6E2E
+text-color=#48C4F8
 
 [urgency=critical]
-background-color=#2B2B2B
-border-color=#CC6E2E
-text-color=#FFBF3F
+background-color=#1B263B
+border-color=#F05A22
+text-color=#48C4F8
 
 [urgency=low]
 background-color=#22303c
-border-color=#C79A2B
+border-color=#415A77
 text-color=#CFC8B5

@@ -35,28 +35,21 @@
 
                     set -g status-style bg=default
 
+set -g pane-active-border-style fg="#CC6E2E"
+set -g pane-border-style fg="#415A77"
 
-# ----- Configuração visual baseada no Stylix -----
-# Configuração de bordas dos painéis
-                    set -g pane-active-border-style fg="#e35b22"  # Laranja vibrante (ativo)
-                    set -g pane-border-style fg="#653b27"        # Marrom escuro (inativo)
+set -g status-style bg="#22303C"
+set -g status-style fg="#E6D5B8"
 
-# Barra de status
-                    set -g status-style bg="#0a506e"             # Fundo escuro (azul profundo)
-                    set -g status-style fg="#cc8f62"             # Texto principal (cinza claro)
+set -g window-status-format "#I #W"
+set -g window-status-style bg="#1B263B"
+set -g window-status-style fg="#6C7A89"
 
-# Configuração dos painéis na barra de status
-                    set -g window-status-format "#I #W"         # Formato: índice + nome
-                    set -g window-status-style bg="#585f62"     # Cinza mais escuro
-                    set -g window-status-style fg="#cc8f62"     # Texto claro
+set -g window-status-current-style bg="#CC6E2E"
+set -g window-status-current-style fg="#22303C"
 
-# Painel ativo na barra de status
-                    set -g window-status-current-style bg="#e35b22"  # Laranja vibrante
-                    set -g window-status-current-style fg="#84dcd4"  # Fundo escuro
-
-# Indicadores adicionais na barra de status
-                    set -g status-left "#[bg=#66a1b8,fg=#000000] #S #[bg=#66a1b8,fg=#84dcd4]"  # Nome da sessão
-                    set -g status-right "#[fg=#cc8f62] %Y-%m-%d #[fg=#84dcd4] %H:%M #[default]"
+set -g status-left "#[bg=#1B263B,fg=#48C4F8] #S "
+set -g status-right "#[fg=#E6D5B8] %Y-%m-%d #[fg=#48C4F8] %H:%M #[default]"
                     '';
         };
     };

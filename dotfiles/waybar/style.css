@@ -3,94 +3,99 @@
   font-family: "FiraCode Nerd Font Mono";
 }
 
+/* ================================================= */
+/* BASE STRUCTURE (70%) */
+/* ================================================= */
+
 window#waybar {
   background: #22303c;
   color: #E6D5B8;
 }
 
+/* ================================================= */
+/* WORKSPACES */
+/* ================================================= */
+
 #workspaces {
   background: #22303c;
-  color: #E6D5B8;
+  color: #6C7A89;
   padding: 0 5px;
 }
 
 #workspaces button {
-  padding: 0 5px;
-  color: #00d2c3;
+  padding: 0 6px;
+  color: #6C7A89;
+}
+
+#workspaces button:hover {
+  color: #48C4F8;
 }
 
 #workspaces button.focused {
-  background: #22303c;
+  background: #1B263B;
   color: #E6D5B8;
+  border-bottom: 2px solid #CC6E2E;
 }
+
+/* ================================================= */
+/* TRAY */
+/* ================================================= */
 
 #tray {
   background: #22303c;
   color: #E6D5B8;
-  padding: 0 5px;
+  padding: 0 6px;
 }
 
-/* CLOCKS — texto é informação → azul */
+/* ================================================= */
+/* CLOCK (information → tech layer) */
+/* ================================================= */
+
 #clock,
 #clock\.1,
 #clock\.2,
 #clock\.3 {
   background: #22303c;
-  color: #48c4f8;
-  padding: 0 5px;
+  color: #48C4F8;
+  padding: 0 6px;
 }
 
-/* MODULES RIGHT — todos são informação */
-#pulseaudio {
-  background: #22303c;
-  color: #00d2c3;
-  padding: 0 5px;
-}
+/* ================================================= */
+/* SYSTEM INFORMATION (tech layer) */
+/* ================================================= */
 
-#memory {
-  background: #22303c;
-  color: #00d2c3;
-  padding: 0 5px;
-}
-
-#cpu {
-  background: #22303c;
-  color: #00d2c3;
-  padding: 0 5px;
-}
-
-#disk {
-  background: #22303c;
-  color: #00d2c3;
-  padding: 0 5px;
-}
-
-#network {
-  background: #22303c;
-  color: #00d2c3;
-  padding: 0 5px;
-}
-
+#pulseaudio,
+#memory,
+#cpu,
+#disk,
+#network,
 #temperature,
 #custom-gpu {
   background: #22303c;
-  color: #00d2c3;
-  padding: 0 5px;
+  color: #00D2C3;
+  padding: 0 6px;
 }
 
-/* NOTIFICATIONS — ícone é funcional, mantém azul */
+/* ================================================= */
+/* NOTIFICATIONS */
+/* ================================================= */
+
 #custom-notifications {
-  color: #48c4f8;
-  padding: 0 5px;
+  background: #22303c;
+  color: #48C4F8;
+  padding: 0 6px;
 }
 
-/* Hover pode usar warm accent (detail) */
 #custom-notifications:hover {
-  color: #f7941e;
+  color: #CC6E2E;
 }
+
+/* ================================================= */
+/* SEPARATORS (mineral / structural detail) */
+/* ================================================= */
 
 #custom-separator {
   background: #22303c;
-  color: #C79A2B; /* detail / structure */
-  padding: 0 5px;
+  color: #C28840;
+  padding: 0 6px;
 }

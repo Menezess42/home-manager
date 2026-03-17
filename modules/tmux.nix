@@ -38,7 +38,7 @@
 set -g pane-active-border-style fg="#CC6E2E"
 set -g pane-border-style fg="#415A77"
 
-set -g status-style bg="#22303C"
+set -g status-style bg="#1B263B"
 set -g status-style fg="#E6D5B8"
 
 set -g window-status-format "#I #W"

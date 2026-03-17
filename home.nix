@@ -48,6 +48,7 @@
         obsidian
         qalculate-gtk
         unzip
+        zip
         git
         # Emacs Vterm
         cmake
@@ -94,6 +95,12 @@
         #Player
         playerctl
         shotcut
+        jetbrains-mono
+        roboto
+        roboto-flex
+        roboto-mono
+        roboto-serif
+        roboto-slab
     ];
 
     xdg.portal = {

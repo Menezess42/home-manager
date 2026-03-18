@@ -101,6 +101,7 @@
         roboto-mono
         roboto-serif
         roboto-slab
+        trash-cli
     ];
 
     xdg.portal = {

@@ -46,7 +46,7 @@ set -g window-status-style bg="#1B263B"
 set -g window-status-style fg="#6C7A89"
 
 set -g window-status-current-style bg="#CC6E2E"
-set -g window-status-current-style fg="#22303C"
+set -g window-status-current-style fg="#1B263B"
 
 set -g status-left "#[bg=#1B263B,fg=#48C4F8] #S "
 set -g status-right "#[fg=#E6D5B8] %Y-%m-%d #[fg=#48C4F8] %H:%M #[default]"

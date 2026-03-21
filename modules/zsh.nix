@@ -43,25 +43,6 @@
             source ${config.home.homeDirectory}/.p10k.zsh
             eval "$(direnv hook zsh)"
             export PATH="$HOME/.config/home-manager/bashscript:$PATH"
-            autoload -Uz add-zsh-hook
-
-            _auto_project_tmux() {
-                [[ -n "$TMUX" ]] && return
-
-                if [[ -f .envrc ]]; then
-                    local session=$(basename "$PWD")
-
-                    if ! tmux has-session -t "$session" 2>/dev/null; then
-                        tmux new-session -d -s "$session" -n editor
-                        tmux new-window -t "$session" -n shell
-                        tmux send-keys -t "$session:editor" "mvim ." C-m
-                    fi
-
-                    tmux attach -t "$session"
-                fi
-            }
-
-            add-zsh-hook chpwd _auto_project_tmux
             '';
         };
     };

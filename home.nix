@@ -1,4 +1,4 @@
-{config, pkgs, lib,...}:
+{config, pkgs, lib, forge-of-ideas,...}:
 {
     home.username = "menezess42";
     home.homeDirectory = "/home/menezess42";
@@ -15,6 +15,7 @@
     fonts.fontconfig.enable = true;
 
     home.packages = with pkgs; [
+        forge-of-ideas.packages.x86_64-linux.default
         # neovim
         xclip
         libreoffice

@@ -1,4 +1,4 @@
-{config, pkgs, lib, forge-of-ideas,...}:
+{config, pkgs, lib,forge-of-ideas,...}:
 {
     home.username = "menezess42";
     home.homeDirectory = "/home/menezess42";

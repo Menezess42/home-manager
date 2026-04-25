@@ -6,7 +6,7 @@
         forge-of-ideas.url = "github:menezess42/forgeOfIdeas";
 	};
 
-	outputs = { nixpkgs, home-manager, stylix, forge-of-ideas,... }@inputs: {
+	outputs = { nixpkgs, home-manager, stylix, forge-of-ideas, ...}@inputs: {
 		homeConfigurations."menezess42" = home-manager.lib.homeManagerConfiguration {
 			pkgs = nixpkgs.legacyPackages.x86_64-linux;
             extraSpecialArgs = {inherit forge-of-ideas; };
